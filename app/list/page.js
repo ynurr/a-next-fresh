@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export default function List() {
   let 상품 = ['Tomatoes','Pasta','Coconut']
   let 어레이 = [2,3,4]
@@ -11,7 +13,8 @@ export default function List() {
       {
         상품.map(function(a,i){
           return (
-            <div className="food">
+            <div className="food" key={i}>
+              <img src={`/food${i}.png`} className="food-img" />
               <h4>{a} $40</h4>
             </div>
           )
